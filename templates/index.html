@@ -1,0 +1,44 @@
+{% extends './base.html' %}
+
+{% block title %} App WEB with flask {% endblock %}
+
+{% block body %}    
+    
+    <h1>Registro de contacto</h1>
+        {% with messages=get_flashed_messages() %}
+        {% if messages %}
+        {% for message in messages %}
+        <p>{{ message }}</p>
+        {% endfor %}
+        {% endif %}
+        {% endwith %}
+        <form class="entradasdedatos" action="/add_contact" method="POST">
+            <input type="text" name="nombre" placeholder="nombre">
+            <input type="text" name="telefono" placeholder="telefono">
+            <input type="text" name="email" placeholder="email">
+            <button type="submit">Agregar</button>
+        </form>
+    <table>
+        <thead>
+            <tr>
+                <td class="cabecera">Nombre Completo</td>
+                <td class="cabecera">Telefono</td>
+                <td class="cabecera">Correo Electronico</td>
+                <td class="cabecera">Operaciones</td>
+            </tr>
+        </thead>
+        <tbody>
+        {% for contacto in contactos %}
+            <tr>
+                <td class="NombreCompleto">{{ contacto.1 }}</td>
+                <td class="telefono">{{ contacto.2 }}</td>
+                <td class="correo" >{{ contacto.3 }}</td>
+                <td>
+                    <a class="operaciones" href="/editar/{{contacto.0}}">Editar</a>
+                    <a class="operaciones" href="/delete/{{contacto.0}}">Borrar</a>
+                </td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+{% endblock %}

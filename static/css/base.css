@@ -1,0 +1,72 @@
+body{
+    background-image: url("/static/back.jpg");
+    background-size: 1250px;
+}
+button{
+    padding: 10px 16px;
+    background-color: rgb(146, 86, 3);
+    color: white;
+    border-radius: 5px;
+}
+
+input{
+    padding: 10px 40px;
+    background-color: rgba(0, 0, 0, .5);
+    color: rgb(255, 255, 255);
+    border-radius: 5px;
+}
+h1{
+    text-align: center;
+    color: rgb(93, 59, 30);
+    font-size: 50px;
+}
+.editar{
+    display: flex;
+    align-items: center;
+    margin: auto;
+    justify-content: center;
+}
+p{
+    text-align: center;
+    font-size: 50px;
+}
+a{
+  text-decoration: none;
+  border-radius: 10px;
+  font-size: 30px;
+}
+a:hover{
+    color: rgb(241, 245, 2);
+    background-color: rgb(241, 149, 0);
+}
+
+table{
+    margin: auto;
+    font-size: 30px;
+}
+.cabecera{
+    background-color: rgba(89, 51, 51, 0.5);
+    color: white;
+    text-align: center;
+}
+.operaciones{
+    background-color: rgb(5, 5, 5);
+    color: white;
+}
+
+.telefono{
+    background-color: rgb(225, 195, 0);
+    
+}
+.NombreCompleto{
+    background-color: rgb(255, 174, 0);
+}
+.correo{
+    background-color: rgb(124, 151, 3);
+}
+
+.entradasdedatos{
+    display: flex;
+    justify-content: center;
+    margin-bottom: 10px;
+}
